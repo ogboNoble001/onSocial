@@ -1,0 +1,240 @@
+<!DOCTYPE html> 
+<html>
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />  
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css"/>  
+ <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" >
+  <link rel="stylesheet" href="CSS_STYLES/style.css" type="text/css" media="all" />  
+  <link rel="stylesheet" href="CSS_STYLES/notification.css" type="text/css" media="all" />
+  <title>OnSocial</title>  
+</head>  
+<body>   
+<!-- Header -->    
+<header class="header flex-row">  
+  <div class="logo">OnSocial.com</div>  
+  <div class="flex-row notAligned">  
+    <div class="notification-dot number">
+      <i class="fas fa-bell"></i>
+      <span class="flex-row notAligned">9</span> 
+    </div>
+    <i class="fas fa-comments"></i>  
+    <div class="profile flex-row">N</div>  
+  </div>  
+</header>    
+  
+<main class="main flex-col"> 
+  <!-- Intro -->  
+  <div class="intro flex-row">  
+    <span class="shine"></span>  
+    <div class="chat-box notAligned">CHAT</div>  
+    <div>  
+      <b>New Update</b>  
+      <p>Connect with millions of individuals all over the globe seamlessly.</p><br />  
+      <div class="notAligned flex-row diff">  
+        <span><b>Join communities</b></span>  
+        <b><i class="fas fa-arrow-right"></i></b>  
+      </div>  
+    </div>  
+    <span class="close">&timesbar;</span>
+  </div>  
+
+  <!-- Navigation Tabs -->  
+  <div class="fadeEffectRel">  
+    <div class="flex-row navs1">  
+      <div class="undernavs1 smallDiv notAligned active">  
+        <i class="fas fa-image"></i> <span data-Type="mainNav" data-Class="memory">Memories</span>  
+      </div>  
+      <div class="undernavs1 smallDiv notAligned">  
+        <i class="fas fa-message"></i>  
+        <span class="notification-dot" data-Type="mainNav" data-Class="messages"><span></span>Messages</span>  
+      </div>  
+      <div class="undernavs1 smallDiv notAligned">  
+        <i class="fas fa-person-booth"></i> <span data-Type="mainNav" data-Class="chatRooms">Chatrooms</span>  
+      </div>  
+      <div class="undernavs1 smallDiv notAligned">  
+        <i class="fas fa-people-group"></i> <span data-Type="mainNav" data-Class="communities">Communities</span>  
+      </div>  
+      <div class="undernavs1 smallDiv notAligned">  
+        <i class="fa-solid fa-calendar-check"></i> <span data-Type="mainNav" data-Class="eventPlan">Event planning</span>  
+      </div>  
+    </div>  
+    <div class="fadeInlineListEffect"></div>  
+  </div>  
+
+  <!-- Search Bar -->  
+  <div class="searchBar flex-row notAligned">  
+    <input type="text" name="searchMsg" id="searchMsg" placeholder="Looking for chats, communities, organizations or events ?" />  
+    <i class="fa fa-magnifying-glass"></i>  
+  </div>  
+
+  <!-- Compose + Write Up -->  
+  <div class="flex-col memories">  
+    <div class="flex-row compoStPrnt notAligned">  
+      <div class="flex-row notAligned">  
+        <div class="profile addDmS">N</div>  
+        <div class="writeUp">  
+          <h4>What's up today, Noble?</h4>  
+          <span class="text-muted">Memories disappear after 24 hours</span>  
+        </div>  
+      </div>  
+      <div class="smallDiv compoSt notAligned">Compose a post</div>  
+    </div>  
+  </div>  
+
+  <!-- Filter Memories -->  
+  <div class="fadeEffectRel" id="fadeEffectRel">  
+    <div class="filterMemories flex-row" data-Class="memory" data-Type="associate">  
+      <span class="filterMemoriesFilter"><b>View memories of:</b></span>  
+      <span class="active notAligned">Contacts</span>  
+      <span class="filterMemoriesFilter">Individuals</span>  
+      <span class="filterMemoriesFilter">Channels</span>  
+      <span class="filterMemoriesFilter">Groups</span>  
+      <span class="filterMemoriesFilter">Communities</span>  
+    </div>  
+    <div class="fadeInlineListEffect"></div>  
+  </div>  
+  
+  
+<div class="mainApp flex-col">
+  
+  <div class="memoryApp" data-Type="navBody" data-Class="memory">
+  <!-- Memory Posts Section -->  
+  <div class="flex-col headbigDiv">  
+    <!-- First Memory Post -->  
+    <div class="flex-col bigDiv">  
+      <div class="flex-row memoryTab">  
+        <div class="memory-slider-wrapper">  
+          <div class="bottom-gradient">  
+            <div class="slider-dots flex-row"></div>  
+          </div>  
+          <div class="video-text">  
+            <div class="flex-row notAligned diff3">  
+              <span class="">Business moments</span>  
+              <div class="slider-dots flex-row notAligned diff4"></div>  
+            </div>  
+            Feel so blessed with these designs  
+          </div>  
+          <div class="memory-slider video">  
+            <video class="mem_img active" src="video_res/large-thumbnail20240318-25648-1l7f8y5.mp4" preload="auto" autoplay loop muted playsinline></video>  
+            <video class="mem_img" src="video_res/large-thumbnail20250304-2538205-1imb7bz.mp4" autoplay loop muted playsinline></video>  
+          </div>  
+        </div>  
+      </div>  
+      <div class="flex-row bigDivUnderneath">  
+        <div class="profile">N</div>  
+        <div class="flex-row likeAndmore">  
+          <div class="writeUp">  
+            <b>You </b>posted this 11:25am<br />  
+            <span class="timer">Remaining 2hrs</span>  
+          </div>  
+          <div class="flex-row notAligned">
+            <span class="openSans"> <i class="fa-regular fa-eye"></i> 13.5k</span>
+        <span class="openSans"> <i class="fa-regular fa-heart"></i> 13</span>
+          <span class="openSans"> <i class="fas fa-share"></i> 2.5k</span>
+        </div>  
+      </div>  
+    </div>  
+<br />
+    <!-- Second Memory Post -->  
+    <div class="flex-col bigDiv">  
+      <div class="flex-row memoryTab">  
+        <div class="memory-slider-wrapper">  
+          <div class="bottom-gradient">  
+            <div class="slider-dots flex-row"></div>  
+          </div>  
+          <div class="video-text">  
+            <div class="memoryTabSentence">  
+              <span class="bold">Happy International Girls day</span>  
+            </div>  
+            Join the celebration around the globe  
+          </div>  
+          <div class="memory-slider video">  
+            <img class="mem_img active" src="img_res/original-cffb3289ad05a12cb5b888091098e935.webp" alt="pic"/>  
+            <img class="mem_img" src="img_res/original-9d03e3f5174b2ca6d16568e211fdf511.webp" alt="pic" />  
+            <img class="mem_img" src="img_res/original-b62c0a329d6480176f25ba4c9d31cd19.webp" alt="pic" />  
+          </div>  
+        </div>  
+      </div>  
+      <div class="flex-row bigDivUnderneath">  
+        <div class="profile red">A</div>  
+       <div class="flex-row likeAndmore">  
+      <div class="writeUp">  
+<b>Andrea </b>posted this yesterday<br />  
+<span class="timer">Remaining 13mins</span>  
+        </div>  
+<div class="flex-row notAligned">
+   <span class="openSans"> <i class="fa-regular fa-eye"></i> 16.5k</span>
+  <span class="openSans"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+  <path d="m9.653 16.915-.005-.003-.019-.01a20.759 20.759 0 0 1-1.162-.682 22.045 22.045 0 0 1-2.582-1.9C4.045 12.733 2 10.352 2 7.5a4.5 4.5 0 0 1 8-2.828A4.5 4.5 0 0 1 18 7.5c0 2.852-2.044 5.233-3.885 6.82a22.049 22.049 0 0 1-3.744 2.582l-.019.01-.005.003h-.002a.739.739 0 0 1-.69.001l-.002-.001Z" />
+</svg>
+ 13</span>
+  <span class="openSans"> <i class="fas fa-share"></i> 10.5k</span>
+       </div>
+        </div>  
+      </div>  
+    </div>  
+    
+  </div>
+  </div>
+  </div>
+  
+  
+<div class="messages notAligned" data-Class="messages" data-Type="navBody">
+  <div class="messageDiv notAligned flex-col">
+    <div>
+    <lord-icon
+src="https://cdn.lordicon.com/fozsorqm.json"
+trigger="in"
+state="in-reveal"
+stroke="bold"
+style="width:250px;height:250px">
+</lord-icon>
+    </div>
+   <div class="messages-Body flex-col notAligned">
+         
+        <div class="title-msg text-muted">
+          <h3>Oops, no messages now</h3>
+        </div>
+       
+        <div class="description openSans"><br />
+        But, you can start from <a href="#" class="notLink"><i class="openSans">here</i></a></div>
+     <br />
+   
+        <p><a class="notLink"><i class="openSans">Need previous account messages?</i></a></p>
+      </div>
+   </div>
+  </div>
+  <div class="chatRooms" data-Type="navBody" data-Class="chatRooms">
+    Hi
+  </div>
+  <div class="communities" data-Type="navBody" data-Class="communities">
+    Hi
+  </div>
+<div class="eventPlan" data-Type="navBody" data-Class="eventPlan">
+  Hi
+</div>
+  </div>
+</main>  
+  <div class="notifyWrapper">
+    <div class="notifyBox">
+<div class="profilePic" id="profilePic"></div>
+      <div class="textBox" id="textBox"></div>
+    </div>
+    </div>
+  </div>
+
+  <div class="magNify notAligned">
+      <i class="fa fa-magnifying-glass"></i>
+  </div>
+  <div class="arrwAndSmallNavs flex-col notAligned">
+  <i class="fas fa-arrow-left"></i>
+</div>
+<div class="overlay"></div>
+  <script src="https://cdn.lordicon.com/lordicon.js" defer></script>
+  <script src="JS_SCRIPTS/main.js" type="text/javascript" charset="utf-8" defer></script>  
+  <script src="JS_SCRIPTS/notification.js" type="text/javascript" charset="utf-8"></script>
+
+</body>  
+</html>

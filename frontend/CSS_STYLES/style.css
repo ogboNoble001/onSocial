@@ -1,0 +1,680 @@
+:root {
+--box-shadow: 4px 4px 35px rgba(0, 0, 0, 0.3);
+--box-padding: 1.4em 0.7em;
+--box-border-radius: 1.6em;
+--text-muted: #aaa;
+--primary-color:#F3F3F6;
+}
+
+*, *::before, *::after {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+outline: none;
+}
+
+*::-webkit-scrollbar {
+display: none;
+}
+
+html, body, main {
+overflow-x: hidden;
+overflow-y: auto;
+scrollbar-width: none;
+-ms-overflow-style: none;
+}
+
+
+img{
+  background-size: cover;
+}
+.flex-col {
+display: flex;
+flex-direction: column;
+}
+
+.flex-row {
+display: flex;
+flex-direction: row;
+}
+.notLink{
+  color: inherit;
+  text-decoration: none;
+}
+
+.title {
+font-family: "Edu NSW ACT Cursive", cursive;
+}
+
+i {
+font-weight: lighter;
+}
+
+b, .bold {
+font-weight: 740;
+}
+
+.text-muted {
+color: var(--text-muted);
+font-family: "Dosis", sans-serif;
+font-weight: 400;
+}
+
+.notAligned {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 1em;
+}
+.noShrink{
+flex: 0 0 0 auto;
+}
+.memoryApp{
+  
+}
+.smallDiv {
+height: 20px;
+width: fit-content;
+font-size: normal;
+padding: var(--box-padding);
+border-radius: var(--box-border-radius);
+}
+.memoryTab {
+gap: 1em;
+overflow-x: scroll;
+justify-content: flex-start;
+}
+.memoryTab .bigDiv{
+flex: 0 0 0 auto;
+width: 100%;
+}
+.memoryTabSentence{
+flex: 0 0  auto;
+justify-content: flex-start;
+width: 70%;
+}
+.video_grad {
+position: relative;
+width: 100%;
+max-width: 100%;
+overflow: hidden;
+}
+.memory-slider-wrapper {
+position: relative;
+width: 100%;
+overflow: hidden;
+}
+
+.slider-dots {
+gap: 6px;
+z-index: 3;
+bottom: 2em;
+right: 1em;
+position: absolute;
+}
+
+.slider-dots .dot {
+width: 8px;
+height: 8px;
+background-color: #1A110E;
+border-radius: 50%;
+transition: background-color 0.3s ease;
+
+}
+
+.slider-dots .dot.active {
+background-color: #F1F2F9;
+}
+.diff3{
+align-items: center;
+justify-content: space-between;
+gap: 6em;
+}
+.diff4{
+
+flex: 0 0 auto;
+
+}
+
+.bottom-gradient {
+position: absolute;
+bottom: 0;
+left: 0;
+border-radius: inherit;
+width: 100%;
+height: 60%;
+border-bottom-right-radius: 18px;
+border-top-left-radius: 8px;
+border-top-right-radius: 30px;
+border-bottom-left-radius: 30px;
+z-index: 1;
+background: linear-gradient(to top, rgba(1, 0, 0,1), transparent);
+pointer-events: none;
+}
+
+.video-text {
+font-family: "Dosis", sans-serif !important;
+position: absolute;
+bottom: 10%;
+width: 100%;
+left: 5%;
+color: white;
+font-size: 1.5rem;
+z-index: 2;
+}
+.video-text span{
+font-size: x-small;
+font-variant: small-caps;
+letter-spacing: 1em;
+}
+.video-text{
+font-size: normal;
+line-height: 1.5;
+}
+.memory-slider-wrapper {
+padding: 0;
+height: fit-content;
+overflow: hidden;
+position: relative;
+width: 100%;
+border-bottom-right-radius: 18px;
+border-top-left-radius: 8px;
+border-top-right-radius: 30px;
+border-bottom-left-radius: 30px;
+}
+
+.memory-slider {
+display: flex;
+transition: transform 0.5s ease-in-out;
+width: 100%;
+}
+
+.memory-slider img,
+.memory-slider video {
+width: 100%;
+height: 50%;
+flex-shrink: 0;
+opacity: 0.3;
+transition: opacity 0.4s ease;
+}
+
+.memory-slider .active {
+opacity: 1 !important;
+}
+.profile {
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+font-family: "Open sans", sans-serif;
+color: white;
+background-color: #01579B;
+width: 30px;
+height: 30px;
+}
+
+.smallerProfile {
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+font-family: "Open sans";
+color: white;
+background-color: #01579B;
+width: 10px;
+height: 10px;
+}
+
+.notification-dot {
+position: relative;
+z-index: 0;
+width: fit-content;
+}
+
+
+.notification-dot span {
+content: "";
+height: 5px;
+width: 5px;
+z-index: -1;
+position: absolute;
+background-color: red;
+border-radius: 50%;
+top: 0;
+right: -10%;
+}
+
+.notification-dot.number span {
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  z-index: -1;
+  padding: 0.7em;
+  font-size: 0.65rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  background-color: red;
+  border-radius: 50%;
+  top: -9%;
+  right: -50%;
+}
+.hidden{
+  display: none;
+}
+.searchBar {
+padding: 0.3em;
+background-color: #F3F3F6;
+margin: 0 1em;
+padding: 1.4em 0.7em;
+border-radius: var(--box-border-radius);
+}
+
+input#searchMsg {
+font-family: "Open sans", sans-serif;
+border: none;
+width: 90%;
+background-color: transparent;
+}
+
+input#searchMsg::placeholder {
+font-weight: 620;
+}
+
+body {
+position: relative;
+height: 100vh;
+width: 100%;
+max-width: 100%;
+overflow-x: hidden;
+overflow-y: scroll;
+transition: top 2s linear;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.6);
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(0, 0, 0, 0.3); /* Optional dark tint */
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.header {
+width: 100%;
+font-weight: bold;
+font-size: 1.3rem;
+padding: 1.2rem 1rem;
+font-family: "Edu NSW ACT Cursive", cursive;
+justify-content: space-between;
+align-items: center;
+background-color: white;
+z-index: 7;
+
+}
+
+.main {
+gap: 0.5em;
+width: 100%;
+max-width: 100%;
+}
+
+.main > *:not(.intro) {
+margin: 0.7em;
+}
+.intro {
+font-family: "Open sans", sans-serif;
+padding: 0.7em 0.5em;
+position: relative;
+overflow-x: hidden;
+overflow-y: scroll;
+background-color: #F1F2F9;
+justify-content: flex-start;
+gap: 1em;
+width:100%;
+max-width: 100%;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: translateY(0);
+  opacity: 1;
+}
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+
+.intro > div:nth-of-type(2) p,
+.intro > div:nth-of-type(2) b {
+line-height: 1.7;
+}
+
+.intro > div:first-of-type:not(._) {
+background-color: black;
+color: white;
+font-weight: 700;
+height: 20px;
+width: 50px;
+padding: 0.7em;
+border-radius: 4px;
+}
+
+.intro .shine {
+position: absolute;
+top: 0;
+left: 0;
+width: 50%;
+height: 100%;
+background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+transform: skewX(-20deg);
+animation: shimmer 2.5s infinite;
+pointer-events: none;
+z-index: 1;
+}
+
+.intro > *:not(.shine) {
+position: relative;
+z-index: 2;
+}
+
+@keyframes shimmer {
+0% {
+left: -75%;
+}
+100% {
+left: 125%;
+}
+}
+
+.intro > span {
+align-items: flex-start;
+padding-right: 0.5em;
+font-size: xx-large;
+margin-left: auto;
+}
+
+.intro div.notAligned.diff {
+justify-content: flex-start;
+gap: 0.5em;
+}
+
+.fadeEffectRel {
+position: relative;
+}
+
+.navs1 {
+gap: 1em;
+align-items: flex-start;
+overflow-x: scroll;
+scrollbar-width: none;
+max-width: 100%;
+}
+
+.fadeInlineListEffect {
+position: absolute;
+top: 0;
+right: 0;
+width: 50%;
+height: 100%;
+background: linear-gradient(to right, transparent, white);
+pointer-events: none;
+}
+
+.undernavs1 {
+font-family: "Dosis", sans-serif;
+font-weight: 600;
+gap: 0.7em;
+background-color: #3A3546;
+color: white;
+flex: 0 0 auto;
+}
+
+.undernavs1:not(.active) {
+background-color: white;
+color: #3A3546;
+}
+
+.memories {
+font-family: "Open sans", sans-serif;
+align-items: flex-start;
+gap: 1em;
+max-width: 100%;
+}
+
+.profile-pic {
+margin: 0;
+padding: 0;
+width: inherit;
+border-radius: 50%;
+height: inherit;
+background: transparent;
+background-size: cover;
+}
+
+.writeUp {
+justify-content: flex-start;
+font-family: "Open sans", sans-serif;
+}
+.compoStPrnt{
+width: 100%;
+justify-content: space-between;
+}
+
+.compoSt {
+background-color: #F1F2F9;
+font-family: "Open sans", sans-serif;
+color: black;
+flex: 0 0 auto;
+}
+
+.filterMemories {
+width: 100%;
+overflow-x: scroll;
+scrollbar-width: none;
+-ms-overflow-style: none;
+gap: 1em;
+align-items: baseline;
+font-family: "Dosis", sans-serif;
+max-width: 100%;
+}
+
+.filterMemories::-webkit-scrollbar {
+display: none;
+}
+
+.filterMemories span.active {
+font-weight: 600;
+background-color: #F8F7F4;
+border-radius: 10px;
+padding: 0.4em 0.5em;
+flex: 0 0 auto;
+}
+
+span.filterMemoriesFilter {
+flex: 0 0 auto;
+font-weight: 600;
+width: fit-content;
+padding: 0.3em 0.5em;
+}
+
+#fadeEffectRel {
+width: 100%;
+}
+
+.addDmS {
+ align-self: flex-start;
+width: 40px;
+font-size: x-large;
+border-radius: 50%;
+height: 40px;
+}
+
+.mem_img {
+  width: 100%;
+  max-height: 450px; /* limits the height so it's not too long */
+  object-fit: cover;
+  object-position: top;
+  background-color: #000;
+  border-bottom-right-radius: 18px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.bigDiv{
+gap: 0.6em;
+}
+.bigDiv span{
+font-family: "Open sans", sans-serif;
+}
+.bigDivUnderneath{
+gap: 0.5em;
+align-items: center;
+font-size: small;
+}
+.likeAndmore{
+display: flex;
+width: 100%;
+justify-content: space-between;
+align-items: flex-start;
+}
+.likeAndmore a{
+text-decoration-line: none;
+}
+.timer{
+font-size: x-small;
+}
+.red{
+background-color: tomato;
+}
+.headbigDiv{
+gap: 3em;
+}
+.event{
+gap: .5em;
+align-items: center;
+justify-content: flex-end;
+}
+.status{
+position: absolute;
+top: 0;
+z-index: 6;
+width: 100%;
+justify-content: flex-start;
+align-items: flex-start;
+}
+.status span{
+background-color: black;
+width: 33.33%;
+}
+.messages{
+  display: flex;
+ justify-content: center;
+ width: 100%;
+}
+.messages-Body{
+  line-height: 2.7;
+}
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  transition:all .2s ;
+ height: 100%;
+}
+
+.card {
+  background-color: transparent;
+  transition: all .4s linear;
+  width: 100%;
+  font-family: "Edu NSW AC", sans-serif;
+}
+
+.lordicon{
+  transition: width .4s ease;
+}
+.card-content {
+  width: 100%;
+  text-align: center;
+}
+
+.title-msg h3 {
+  margin: 0;
+  font-family:"Edu NSW ACT Cursive", cursive;
+  font-size: x-large;
+  color: #333;
+}
+.description {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+ 
+}
+
+
+.magNify {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: #3A3546;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 10;
+  bottom: 2em;
+  left: 1em;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 1;
+  transform: scale(1);
+}
+.magNify:hover {
+  transform: scale(1.1);
+}
+
+.magNify.hide {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+}
+.magNify i {
+  color: white;
+  font-size: 1.2rem;
+}
+.openSans{
+  font-family: "Open sans", sans-serif;
+}
+.mainApp{
+  padding-bottom: 1em
+}
+.arrwAndSmallNavs{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 10;
+  bottom: 2em;
+  right: 1em;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 1;
+  transform: scale(1);
+}
+.trackBtn{
+  align-self: center;
+}
+i.openSans{
+  text-decoration:underline;
+}
+.dosis{
+  font-family: "Dosis", sans-serif;
+}
+.fa-regular{
+  color :#9C9EA4;
+}

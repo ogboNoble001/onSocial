@@ -1,0 +1,85 @@
+ .notifyWrapper {
+      position: fixed;
+      top: 35px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+     
+      pointer-events: none;
+    }
+
+    .notifyBox {
+      position: relative;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+     
+      height: 80px;
+      gap: -1em;
+    }
+
+.notifyBox .profilePic {
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+ 
+  transform: scale(0);
+  animation: scaleUp 0.6s forwards, slideLeft 0.5s forwards 0.6s, slideBack 0.5s forwards 3s, scaleDown 0.4s forwards 3.6s;
+}
+    .textBox {
+      position: absolute;
+      left:-2em;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      display: none;
+   white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+      font-size: 1rem;
+      font-weight: 440;
+      font-family: "Dosis", sans-serif;
+      padding: 0.6em 0.4em;
+      border-radius: 12px;
+      background-color: white;
+      color: black;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .textBox.visible {
+      display: block;
+      opacity: 1;
+    }
+
+    @keyframes scaleUp {
+      to {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideLeft {
+      to {
+        transform: scale(1) translateX(-100px);
+      }
+    }
+
+    @keyframes slideBack {
+      to {
+        transform: scale(1) translateX(0);
+      }
+    }
+
+    @keyframes scaleDown {
+      to {
+        transform: scale(0);
+        opacity: 0;
+      }
+    }
+ 
