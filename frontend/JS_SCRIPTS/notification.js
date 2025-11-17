@@ -14,7 +14,7 @@ function showProfilePop(imageUrl, text) {
   
   // Trigger animation
   pic.style.animation =
-    'scaleUp 0.6s forwards, slideLeft 0.5s forwards 0.6s, slideBack 0.5s forwards 3s, scaleDown 0.4s forwards 3.6s';
+    'scaleUp 0.6s forwards, slideLeft 0.5s forwards 0.59s, slideBack 0.5s forwards 3s, scaleDown 0.4s forwards 3.6s';
   
   // Show text after pic moves
   setTimeout(() => {
